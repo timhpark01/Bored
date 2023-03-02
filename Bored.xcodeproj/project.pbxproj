@@ -14,6 +14,10 @@
 		2237248C29ADD18300440CA3 /* BoredTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2237248B29ADD18300440CA3 /* BoredTests.swift */; };
 		2237249629ADD18300440CA3 /* BoredUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2237249529ADD18300440CA3 /* BoredUITests.swift */; };
 		2237249829ADD18300440CA3 /* BoredUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2237249729ADD18300440CA3 /* BoredUITestsLaunchTests.swift */; };
+		223724A529AE7B4900440CA3 /* circleimage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223724A429AE7B4900440CA3 /* circleimage.swift */; };
+		223724A729AE857C00440CA3 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223724A629AE857C00440CA3 /* MapView.swift */; };
+		223724A929AE8AFA00440CA3 /* list.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223724A829AE8AFA00440CA3 /* list.swift */; };
+		223724AB29AE8B3100440CA3 /* BuildingListsAndNavigation in Resources */ = {isa = PBXBuildFile; fileRef = 223724AA29AE8B3100440CA3 /* BuildingListsAndNavigation */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,10 @@
 		2237249129ADD18300440CA3 /* BoredUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoredUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2237249529ADD18300440CA3 /* BoredUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoredUITests.swift; sourceTree = "<group>"; };
 		2237249729ADD18300440CA3 /* BoredUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoredUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		223724A429AE7B4900440CA3 /* circleimage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circleimage.swift; sourceTree = "<group>"; };
+		223724A629AE857C00440CA3 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		223724A829AE8AFA00440CA3 /* list.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = list.swift; sourceTree = "<group>"; };
+		223724AA29AE8B3100440CA3 /* BuildingListsAndNavigation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BuildingListsAndNavigation; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +105,12 @@
 			children = (
 				2237247929ADD18200440CA3 /* BoredApp.swift */,
 				2237247B29ADD18200440CA3 /* ContentView.swift */,
+				223724A629AE857C00440CA3 /* MapView.swift */,
+				223724A829AE8AFA00440CA3 /* list.swift */,
 				2237247D29ADD18300440CA3 /* Assets.xcassets */,
+				223724A429AE7B4900440CA3 /* circleimage.swift */,
 				2237247F29ADD18300440CA3 /* Bored.entitlements */,
+				223724AA29AE8B3100440CA3 /* BuildingListsAndNavigation */,
 				2237248029ADD18300440CA3 /* Preview Content */,
 			);
 			path = Bored;
@@ -234,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2237248229ADD18300440CA3 /* Preview Assets.xcassets in Resources */,
+				223724AB29AE8B3100440CA3 /* BuildingListsAndNavigation in Resources */,
 				2237247E29ADD18300440CA3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +272,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223724A929AE8AFA00440CA3 /* list.swift in Sources */,
+				223724A529AE7B4900440CA3 /* circleimage.swift in Sources */,
+				223724A729AE857C00440CA3 /* MapView.swift in Sources */,
 				2237247C29ADD18200440CA3 /* ContentView.swift in Sources */,
 				2237247A29ADD18200440CA3 /* BoredApp.swift in Sources */,
 			);
