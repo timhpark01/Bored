@@ -15,9 +15,11 @@
 		2237249629ADD18300440CA3 /* BoredUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2237249529ADD18300440CA3 /* BoredUITests.swift */; };
 		2237249829ADD18300440CA3 /* BoredUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2237249729ADD18300440CA3 /* BoredUITestsLaunchTests.swift */; };
 		223724A529AE7B4900440CA3 /* circleimage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223724A429AE7B4900440CA3 /* circleimage.swift */; };
-		223724A729AE857C00440CA3 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223724A629AE857C00440CA3 /* MapView.swift */; };
-		223724A929AE8AFA00440CA3 /* list.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223724A829AE8AFA00440CA3 /* list.swift */; };
-		223724AB29AE8B3100440CA3 /* BuildingListsAndNavigation in Resources */ = {isa = PBXBuildFile; fileRef = 223724AA29AE8B3100440CA3 /* BuildingListsAndNavigation */; };
+		225EA2622A57F92100CAEB44 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225EA2612A57F92100CAEB44 /* SwiftUIView.swift */; };
+		226120652A570AF900E3439B /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226120642A570AF900E3439B /* HomeScreenView.swift */; };
+		226120672A570B1100E3439B /* GameCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226120662A570B1100E3439B /* GameCard.swift */; };
+		226120712A577AFC00E3439B /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226120702A577AFC00E3439B /* Games.swift */; };
+		226120732A577B9300E3439B /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226120722A577B9300E3439B /* ModelData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,9 +52,12 @@
 		2237249529ADD18300440CA3 /* BoredUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoredUITests.swift; sourceTree = "<group>"; };
 		2237249729ADD18300440CA3 /* BoredUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoredUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		223724A429AE7B4900440CA3 /* circleimage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circleimage.swift; sourceTree = "<group>"; };
-		223724A629AE857C00440CA3 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		223724A829AE8AFA00440CA3 /* list.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = list.swift; sourceTree = "<group>"; };
-		223724AA29AE8B3100440CA3 /* BuildingListsAndNavigation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BuildingListsAndNavigation; sourceTree = "<group>"; };
+		225EA2612A57F92100CAEB44 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		226120642A570AF900E3439B /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		226120662A570B1100E3439B /* GameCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCard.swift; sourceTree = "<group>"; };
+		226120702A577AFC00E3439B /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
+		226120722A577B9300E3439B /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		2281E54129B07D0900C164FF /* GamesData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GamesData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,12 +110,12 @@
 			children = (
 				2237247929ADD18200440CA3 /* BoredApp.swift */,
 				2237247B29ADD18200440CA3 /* ContentView.swift */,
-				223724A629AE857C00440CA3 /* MapView.swift */,
-				223724A829AE8AFA00440CA3 /* list.swift */,
-				2237247D29ADD18300440CA3 /* Assets.xcassets */,
+				2281E54429B0865F00C164FF /* Views */,
+				2281E54629B0867800C164FF /* Model */,
+				2281E54529B0866A00C164FF /* Resources */,
 				223724A429AE7B4900440CA3 /* circleimage.swift */,
+				2237247D29ADD18300440CA3 /* Assets.xcassets */,
 				2237247F29ADD18300440CA3 /* Bored.entitlements */,
-				223724AA29AE8B3100440CA3 /* BuildingListsAndNavigation */,
 				2237248029ADD18300440CA3 /* Preview Content */,
 			);
 			path = Bored;
@@ -139,6 +144,41 @@
 				2237249729ADD18300440CA3 /* BoredUITestsLaunchTests.swift */,
 			);
 			path = BoredUITests;
+			sourceTree = "<group>";
+		};
+		226120632A570AD500E3439B /* HomeScreenView */ = {
+			isa = PBXGroup;
+			children = (
+				226120662A570B1100E3439B /* GameCard.swift */,
+			);
+			path = HomeScreenView;
+			sourceTree = "<group>";
+		};
+		2281E54429B0865F00C164FF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				226120632A570AD500E3439B /* HomeScreenView */,
+				226120642A570AF900E3439B /* HomeScreenView.swift */,
+				225EA2612A57F92100CAEB44 /* SwiftUIView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2281E54529B0866A00C164FF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2281E54129B07D0900C164FF /* GamesData.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2281E54629B0867800C164FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				226120702A577AFC00E3439B /* Games.swift */,
+				226120722A577B9300E3439B /* ModelData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,7 +245,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					2237247529ADD18200440CA3 = {
 						CreatedOnToolsVersion = 14.2;
@@ -246,7 +286,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2237248229ADD18300440CA3 /* Preview Assets.xcassets in Resources */,
-				223724AB29AE8B3100440CA3 /* BuildingListsAndNavigation in Resources */,
 				2237247E29ADD18300440CA3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,11 +311,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				223724A929AE8AFA00440CA3 /* list.swift in Sources */,
+				226120672A570B1100E3439B /* GameCard.swift in Sources */,
 				223724A529AE7B4900440CA3 /* circleimage.swift in Sources */,
-				223724A729AE857C00440CA3 /* MapView.swift in Sources */,
+				225EA2622A57F92100CAEB44 /* SwiftUIView.swift in Sources */,
+				226120732A577B9300E3439B /* ModelData.swift in Sources */,
+				226120712A577AFC00E3439B /* Games.swift in Sources */,
 				2237247C29ADD18200440CA3 /* ContentView.swift in Sources */,
 				2237247A29ADD18200440CA3 /* BoredApp.swift in Sources */,
+				226120652A570AF900E3439B /* HomeScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +388,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -404,6 +447,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -430,6 +474,7 @@
 				CODE_SIGN_ENTITLEMENTS = Bored/Bored.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Bored/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -466,6 +511,7 @@
 				CODE_SIGN_ENTITLEMENTS = Bored/Bored.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Bored/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -501,6 +547,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
@@ -523,6 +570,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
@@ -544,6 +592,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
@@ -565,6 +614,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
