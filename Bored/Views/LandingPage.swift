@@ -8,26 +8,29 @@
 import SwiftUI
 
 struct LandingPageView: View {
+    @StateObject private var navigationStack = NavigationStack(NavigationItem(LandingPageView()))
+    
     var body: some View {
         VStack {
-            Text("Welcome to My Social Media App")
+            Text("Bored?")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .padding()
             
-            Image("social_media_icon")
+            Image(systemName: "circle")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 200, height: 200)
                 .padding()
             
-            Text("Connect with friends and share your experiences.")
+            Text("Find Something to Do!")
                 .font(.title)
+                .fontWeight(.bold)
                 .multilineTextAlignment(.center)
                 .padding()
             
             Button(action: {
-                // Action to perform when the button is tapped
+                isShowingDestinationView = true
             }) {
                 Text("Sign Up")
                     .font(.title)
@@ -35,9 +38,12 @@ struct LandingPageView: View {
                     .foregroundColor(.white)
                     .padding()
                     .frame(maxWidth: .infinity)
-                    .background(Color.blue)
+                    .background(Color.orange)
                     .cornerRadius(10)
                     .padding(.horizontal)
+            }
+            .sheet(isPresented: $isShowingDestinationView) {
+                HomePageView()
             }
             
             HStack {
@@ -49,7 +55,7 @@ struct LandingPageView: View {
                 }) {
                     Text("Log in")
                         .font(.headline)
-                        .foregroundColor(.blue)
+                        .foregroundColor(.orange)
                 }
             }
             .padding(.top)
