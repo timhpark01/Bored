@@ -10,17 +10,30 @@ import SwiftUI
 
 
 struct GameCard: View {
-    var game: Games
+    var exampleGame: Games
     
     var body: some View {
         HStack {
-            Text(game.name)
+            HStack {
+                Text(exampleGame.name)
+            }
+            HStack {
+                Text(String(exampleGame.id))
+            }
+            HStack {
+                Text(String(exampleGame.size))
+            }
+            HStack {
+                Text(exampleGame.description)
+            }
         }
     }
 }
 
 struct GameCard_Previews: PreviewProvider {
     static var previews: some View {
-        GameCard(game: game[0])
+//        GameCard(game: game[0])
+        let ExampleGame = Games(id:3, name:"hi", size:5, description: "this is a game")
+        GameCard(exampleGame: ExampleGame)
     }
 }

@@ -11,6 +11,9 @@ struct SwiftUIView: View {
     var body: some View {
         VStack(){
             HStack(){
+                Image(systemName: "magnifyingglass")
+            }
+            HStack(){
                 Color.red
             }
 //            .layoutPriority()
@@ -35,7 +38,6 @@ struct SwiftUIView: View {
             .background(Color.orange)
 
         }
-        .ignoresSafeArea()
     }
 }
 
