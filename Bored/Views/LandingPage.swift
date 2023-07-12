@@ -19,11 +19,12 @@ struct LandingPageView: View {
                 .fontWeight(.bold)
                 .padding()
             
-            Image(systemName: "circle")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 200, height: 200)
-                .padding()
+//            Image(systemName: "circle")
+//                .resizable()
+//                .aspectRatio(contentMode: .fit)
+//                .frame(width: 200, height: 200)
+//                .padding()
+            ResizableLogoImage(width: 200, height: 200)
             
             Text("Find Something to Do!")
                 .font(.title)
