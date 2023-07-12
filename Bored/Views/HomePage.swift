@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 struct Post: Identifiable {
     var id = UUID()
     var username: String
@@ -14,6 +13,8 @@ struct Post: Identifiable {
 }
 
 struct HomePageView: View {
+    @State private var indoorOutdoor = false
+    @State private var action: Int? = 0
     var posts: [Post] = [
         Post(username: "John", content: "Having a great day!"),
         Post(username: "Emily", content: "Just finished an amazing book."),
@@ -21,14 +22,11 @@ struct HomePageView: View {
     ]
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List(posts) { post in
                 VStack(alignment: .leading, spacing: 8) {
                     Text(post.username)
-                        .font(
-//                            .headline
-                            .custom("Helvetica Neue", size: 30)
-                        )
+                        .font(.custom("Helvetica Neue", size: 30))
                     Text(post.content)
                         .font(.body)
                         .lineLimit(nil)
@@ -36,6 +34,16 @@ struct HomePageView: View {
                 .padding(8)
             }
             .navigationTitle("Home")
+            .toolbar {
+                ToolbarItemGroup(placement: .bottomBar){
+                    Button(action:{print("Button tapped!")}){
+                        NavigationLink(destination: IndoorOutdoorView()) {
+                            ResizableLogoImage(width: 150, height: 150, text: "Bored?")
+                            .padding(.bottom, 75)
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -45,4 +53,3 @@ struct HomePageView_Previews: PreviewProvider {
         HomePageView()
     }
 }
-
