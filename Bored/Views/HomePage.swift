@@ -35,7 +35,7 @@ struct HomePageView: View {
                 }
                 .padding(8)
             }
-            .navigationBarTitle("Home")
+            .navigationTitle("Home")
         }
     }
 }

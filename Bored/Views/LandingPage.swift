@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct LandingPageView: View {
-    @StateObject private var navigationStack = NavigationStack(NavigationItem(LandingPageView()))
+    @State private var isShowingDestinationView = false
+
+//    @StateObject private var navigationStack = NavigationStack(NavigationItem(LandingPageView()))
     
     var body: some View {
         VStack {
