@@ -119,7 +119,7 @@ struct RegisterView: View {
     @State var phoneID: String = ""
     @State var password: String = ""
     @State var userName: String = ""
-    @State var game: String = ""
+    @State var userGame: String = ""
     @State var gamerTag: String = ""
     @State var userProfilePicData: Data?
     
@@ -205,8 +205,6 @@ struct RegisterView: View {
                 showImagePicker.toggle()
             }
             
-            
-            
             TextField("User Name", text: $userName)
                 .textContentType(.emailAddress)
                 .border(1 , .orange.opacity(0.5))
@@ -219,7 +217,7 @@ struct RegisterView: View {
                 .textContentType(.telephoneNumber)
                 .border(1 , .orange.opacity(0.5))
             
-            TextField("Game", text: $game)
+            TextField("Game", text: $userGame)
                 .textContentType(.telephoneNumber)
                 .border(1 , .orange.opacity(0.5))
             
@@ -238,7 +236,8 @@ struct RegisterView: View {
                     .fillView(.black)
                     
             }
-            .padding(.top, 20)
+            .disableWithOpacity(userName == "" || emailID == "" || password == "")
+            .padding(.top, 10)
 
         }
     }
@@ -247,15 +246,25 @@ struct RegisterView: View {
         Task{
             do{
                 //creating firebase account
-                let user = try await Auth.auth().createUser(withEmail: emailID, password: password)
+                try await Auth.auth().createUser(withEmail: emailID, password: password)
                 //upload pro pic in firebase
                 guard let userUID = Auth.auth().currentUser?.uid else{return}
                 guard let imageData = userProfilePicData else {return}
-                
                 let storageRef = Storage.storage().reference().child("Profile_Images").child(userUID)
                 let _ = try await storageRef.putDataAsync(imageData)
                 
+                //download photo url
                 let downloadURL = try await storageRef.downloadURL()
+                
+                // create a user firestore objeect
+                let user = User(username: userName, userUID: userUID, userGame: userGame, gamerTag: gamerTag, userEmail: emailID, userPhone: phoneID, userProfileURL: downloadURL)
+                // saving user doc into database
+                let _ = try Firestore.firestore().collection("Users").document(userUID).setData(from: user, completion:{
+                    error in
+                    if error == nil {
+                        print("Saved Successfully")
+                    }
+                })
                 
             }catch{
                 await setError(error)
@@ -280,6 +289,13 @@ struct LoginView_Previews: PreviewProvider {
 
 
 extension View{
+    //disabling with opacity
+    func disableWithOpacity(_ condition: Bool)->some View {
+        self
+            .disabled(condition)
+            .opacity(condition ? 0.6 : 1)
+    }
+    
     func hAlign(_ alignment: Alignment) -> some View{
         self
             .frame(maxWidth: .infinity, alignment: alignment)

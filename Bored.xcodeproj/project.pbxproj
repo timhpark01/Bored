@@ -25,6 +25,7 @@
 		225EA2722A5FC22300CAEB44 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 225EA2712A5FC22300CAEB44 /* FirebaseFirestore */; };
 		225EA2742A5FC22E00CAEB44 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 225EA2732A5FC22E00CAEB44 /* FirebaseFirestoreSwift */; };
 		225EA2762A5FC23800CAEB44 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 225EA2752A5FC23800CAEB44 /* FirebaseStorage */; };
+		225EA2782A604E0A00CAEB44 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225EA2772A604E0A00CAEB44 /* User.swift */; };
 		226120652A570AF900E3439B /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226120642A570AF900E3439B /* HomeScreenView.swift */; };
 		226120672A570B1100E3439B /* GameCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226120662A570B1100E3439B /* GameCard.swift */; };
 		226120712A577AFC00E3439B /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226120702A577AFC00E3439B /* Games.swift */; };
@@ -69,6 +70,7 @@
 		225EA2672A58B20600CAEB44 /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
 		225EA2692A5E5EDE00CAEB44 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		225EA26E2A5E5F9300CAEB44 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		225EA2772A604E0A00CAEB44 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		226120642A570AF900E3439B /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		226120662A570B1100E3439B /* GameCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCard.swift; sourceTree = "<group>"; };
 		226120702A577AFC00E3439B /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 			children = (
 				226120702A577AFC00E3439B /* Games.swift */,
 				226120722A577B9300E3439B /* ModelData.swift */,
+				225EA2772A604E0A00CAEB44 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				225EA2782A604E0A00CAEB44 /* User.swift in Sources */,
 				226120672A570B1100E3439B /* GameCard.swift in Sources */,
 				225EA2642A58B18000CAEB44 /* LandingPage.swift in Sources */,
 				223724A529AE7B4900440CA3 /* circleimage.swift in Sources */,
