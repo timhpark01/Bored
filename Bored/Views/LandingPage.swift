@@ -24,7 +24,7 @@ struct LandingPageView: View {
 //                .aspectRatio(contentMode: .fit)
 //                .frame(width: 200, height: 200)
 //                .padding()
-            ResizableLogoImage(width: 200, height: 200)
+            BoredCircleComponent(width: 200, height: 200)
             
             Text("Find Something to Do!")
                 .font(.title)

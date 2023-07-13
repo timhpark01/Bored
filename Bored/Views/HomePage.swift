@@ -38,7 +38,7 @@ struct HomePageView: View {
                 ToolbarItemGroup(placement: .bottomBar){
                     Button(action:{print("Button tapped!")}){
                         NavigationLink(destination: IndoorOutdoorView()) {
-                            ResizableLogoImage(width: 150, height: 150, text: "Bored?")
+                            BoredCircleComponent(width: 150, height: 150, text: "Bored?")
                             .padding(.bottom, 75)
                         }
                     }
