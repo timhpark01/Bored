@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct ResizableLogoImage: View {
+struct BoredCircleComponent: View {
     var width: CGFloat
     var height: CGFloat
     var text: String? // Optional input for the string
