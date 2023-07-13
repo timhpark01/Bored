@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct User {
+struct Users {
     var username: String
     var bio: String
     var followers: Int
@@ -16,7 +16,7 @@ struct User {
 }
 
 struct ProfilePageView: View {
-    var user: User
+    var user: Users
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -69,8 +69,8 @@ struct ProfilePageView: View {
 
 struct ProfilePageView_Previews: PreviewProvider {
     static var previews: some View {
-        let user = User(username: "JohnDoe", bio: "I love photography and traveling.", followers: 1500, following: 120, posts: 250)
-        ProfilePageView(user: user)
+        let users = Users(username: "JohnDoe", bio: "I love photography and traveling.", followers: 1500, following: 120, posts: 250)
+        ProfilePageView(user: users)
     }
 }
 
